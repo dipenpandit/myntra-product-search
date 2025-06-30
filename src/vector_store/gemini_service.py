@@ -4,7 +4,7 @@ import os
 import json
 import pandas as pd
 import joblib
-
+import streamlit as st
 
 DATA_PATH = "src/data/myntra_products_with_embeddings.joblib"
 df = joblib.load(DATA_PATH)
@@ -13,7 +13,7 @@ df = joblib.load(DATA_PATH)
 def get_response(messages):
     client = OpenAI(
         base_url = "https://generativelanguage.googleapis.com/v1beta/openai/",
-        api_key =  os.getenv("GEMINI_API_KEY")
+        api_key =  st.session_state["GEMINI_API_KEY"]
     )
     response = client.chat.completions.create(
       model = "gemini-2.0-flash",

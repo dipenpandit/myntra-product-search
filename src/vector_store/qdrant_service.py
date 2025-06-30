@@ -2,14 +2,14 @@ from qdrant_client import QdrantClient, models
 from config import *
 from qdrant_client.models import Filter, FieldCondition, MatchValue, Range
 from src.vector_store.gemini_service import get_filters
-import os
-from dotenv import load_dotenv
-load_dotenv()
+
+import streamlit as st
+
 
 def get_client():
     qdrant_client = QdrantClient(
-        url=QDRANT_URL, 
-        api_key=os.getenv("QDRANT_API_KEY"),
+        url=st.secrets["QDRANT_URL"],
+        api_key=st.secrets["QDRANT_API_KEY"],
     )
     return qdrant_client
 

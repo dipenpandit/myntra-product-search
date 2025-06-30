@@ -1,5 +1,4 @@
 import streamlit as st
-import os
 from src.vector_store.search import search
 from config import DATA_PATH
 import joblib
@@ -9,7 +8,6 @@ warnings.filterwarnings("ignore", category=SyntaxWarning)
 
 
 
-load_dotenv()
 
 
 # Sidebar: Get API Key from user input (stored only in memory)
@@ -19,7 +17,6 @@ user_key = st.sidebar.text_input("Enter Gemini API Key", type="password")
 if user_key:
     # Store key in session state
     st.session_state["GEMINI_API_KEY"] = user_key
-    os.environ["GEMINI_API_KEY"] = user_key  # optional, if your code expects it from env
     st.sidebar.success("API Key loaded for session ✅")
 else:
     st.sidebar.warning("Please enter your Gemini API key to proceed.")

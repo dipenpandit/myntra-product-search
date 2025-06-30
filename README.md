@@ -26,6 +26,8 @@ A hybrid semantic search system for Myntra fashion products combining vector sim
 | UI Framework    | Streamlit                |
 | Data Pipeline   | Pandas + Joblib          |
 
+## Run deployed app
+Link: https://myntra-search.streamlit.app/
 
 ## Run locally
 
@@ -44,9 +46,10 @@ A hybrid semantic search system for Myntra fashion products combining vector sim
    uv pip install -r requirements.txt
    ```
 
-3. Add secrets to `.env`:
+3. Add secrets to `.streamlit/secrets.toml`:
    ```env
    QDRANT_API_KEY=your_qdrant_key
+   QDRANT_URL = qdrant_cluster_url
    ```
 
 4. Index the points in qdrant cluster
