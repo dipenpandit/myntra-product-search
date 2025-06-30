@@ -26,6 +26,8 @@ A hybrid semantic search system for Myntra fashion products combining vector sim
 | UI Framework    | Streamlit                |
 | Data Pipeline   | Pandas + Joblib          |
 
+## Run deployed app
+Link: https://myntra-search.streamlit.app/
 
 ## Run locally
 
