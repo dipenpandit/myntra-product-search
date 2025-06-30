@@ -31,13 +31,15 @@ A hybrid semantic search system for Myntra fashion products combining vector sim
 
 1. Clone repository:
    ```bash
-   git clone https://github.com/yourrepo/myntra-search.git
-   cd myntra-search
+   git clone 'https://github.com/dipenpandit/myntra-product-search'
+   cd myntra-product-search
    ```
 
 2. Set up environment:
    ```bash
-   python -m venv venv_name
+   python -m venv venv
+   source venv/bin/activate     # linux/mac
+   venv\Scripts\activate        # cmd windows
    pip install uv      # uv for faster package installation
    uv pip install -r requirements.txt
    ```
