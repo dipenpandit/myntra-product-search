@@ -27,9 +27,6 @@ A hybrid semantic search system for Myntra fashion products combining vector sim
 | Data Pipeline   | Pandas + Joblib          |
 
 
-## Run deployed search app
-*link*
-
 ## Run locally
 
 1. Clone repository:
@@ -40,7 +37,9 @@ A hybrid semantic search system for Myntra fashion products combining vector sim
 
 2. Set up environment:
    ```bash
-   pip install -r requirements.txt
+   python -m venv venv_name
+   pip install uv      # uv for faster package installation
+   uv pip install -r requirements.txt
    ```
 
 3. Add secrets to `.env`:
