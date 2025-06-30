@@ -49,6 +49,7 @@ Link: https://myntra-search.streamlit.app/
 3. Add secrets to `.env`:
    ```env
    QDRANT_API_KEY=your_qdrant_key
+   QDRANT_URL="qdrant_cluster_url"
    ```
 
 4. Index the points in qdrant cluster
